@@ -7,3 +7,4 @@
  * crear un reporte de inventario - ordenado
  */
 alert (listas);
+
