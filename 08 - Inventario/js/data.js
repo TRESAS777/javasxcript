@@ -6,51 +6,8 @@ const idAuto = (() => {
     }
 })();
 
-
-// let producto = [];
-// let nombre =  ("Digite el nombre del producto:");
-// let cantidad =  ("Ingrese la cantidad a agregar:");
-// let precio =  ("A cómo se vende la unidad de este producto:")
-// let categoria =  ("Agregue la categoría del producto:")
-// const datos = {
-//     id: idAuto(),
-//     nombre,
-//     cantidad,
-//     precio,
-//     categoria,
-// };
-// producto.push(datos);
-// console.log(producto);
-// producto.forEach( (producto, index ) => 
-//     { console.log(index,producto);
-//         alert(`${index} - Nombre: ${producto.nombre}; Cantidad: ${producto.cantidad}; Precio: ${producto.precio}\n`);
-//         document.write(`${index} - Nombre: ${producto.nombre}; Cantidad: ${producto.cantidad}; Precio: ${producto.precio}\n`);
-// });
-
-do {
-    let agregar = confirm("Desea agregar un producto?");
-     console.log(agregar);
-    if (agregar===true){
-        let nombre = prompt ("Digite el nombre del producto:");
-        let cantidad = prompt ("Ingrese la cantidad a agregar:");
-        let precio = prompt ("A cómo se vende la unidad de este producto:")
-        let categoria = prompt ("Agregue la categoría del producto:")
-        const datos = {
-            id: idAuto(),
-            nombre,
-            cantidad,
-            precio,
-            categoria,
-        };
-        producto.push(datos)
-        console.log(producto);
-        producto.forEach( (producto, index ) => 
-        { console.log(index,producto);
-            alert(`${index} - Nombre: ${producto.nombre}; Cantidad: ${producto.cantidad}; Precio: ${producto.precio}\n`);
-            document.write(`${index} - Nombre: ${producto.nombre}; Cantidad: ${producto.cantidad}; Precio: ${producto.precio}\n`);
-        });
-    } else {
-        break;
-    }
-    agregar = confirm("Desea agregar otro producto?");
-} while (agregar===true);
+let listaDeProductos = [
+    {id: idAuto, nombre:"celular", categoria:"tecnología",cantidad:5,precio: 50000000, marca: "Nokia"},
+    {id: idAuto, nombre:"Arroz", categoria:"comida",cantidad:5,precio: 2300, marca: "Roa"},
+    {id: idAuto, nombre:"Medias", categoria:"ropa",cantidad:5,precio: 25000, marca: "Adidas"},
+]
