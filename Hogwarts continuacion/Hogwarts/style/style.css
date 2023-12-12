@@ -1,0 +1,32 @@
+@import url('https://fonts.cdnfonts.com/css/harry-potter');
+@import url('https://fonts.cdnfonts.com/css/magic-school-one');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Harry Potter', sans-serif;
+}
+
+body {
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    min-width: 100%;
+    color: whitesmoke;
+}
+              
+button {
+    position: absolute;
+}
+
+.btn {
+    font-family: 'Magic School Two', sans-serif;
+}
+
+button:hover {
+    transition: .5s;
+    scale: 2;
+}
