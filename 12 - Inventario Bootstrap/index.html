@@ -9,6 +9,11 @@
       <!-- link de boxicons -->
       <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
       <link rel="stylesheet" href="./style/style.css">
+      <style>
+        .offcanvas-backdrop {
+          pointer-events: none;
+        }
+      </style>
   </head>
 
   <body>
@@ -56,13 +61,13 @@
               <!-- columna 1 -->
               <div class="col-12 my-3">
                       <div class="container-fluid d-flex justify-content-end">
-                        <button class="btn btn-dark" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                        <button class="btn btn-dark" id="btnOpenDrawer" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
                           Agregar Producto
                         </button>
                         <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
                           <div class="offcanvas-header">
                             <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Agregar Producto</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close" id="btnClose"></button>
                           </div>
                           <div class="offcanvas-body">
                             <form id="form-agregar" action="">
@@ -88,7 +93,7 @@
                               </div>
                               <select class="form-select" aria-label="Default select example" id="categoria">
                                   <option selected disabled value="">Categoria</option>
-                                  <option value="carbohidratro">Carbohidratro</option>
+                                  <option value="carbohidrato">Carbohidratro</option>
                                   <option value="lacteo">Lacteo</option>
                                   <option value="proteina">Proteina</option>
                                 </select>
