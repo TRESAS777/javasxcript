@@ -16,6 +16,7 @@ body {
     min-height: 100vh;
     min-width: 100%;
     color: whitesmoke;
+    overflow: hidden;
 }
               
 button {
@@ -30,3 +31,33 @@ button:hover {
     transition: .5s;
     scale: 2;
 }
+
+.d-flex #columnaIzquierda {
+    position: relative;
+    /* animation: salidaIzquierda 5s ease; */
+}
+
+.d-flex #columnaDerecha {
+    position: relative;
+    /* animation: salidaDerecha 5s ease; */
+}
+
+
+@keyframes salidaIzquierda {
+    from {
+        transform: translateX(0%);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+@keyframes salidaDerecha {
+    from {
+        transform: translateX(0%);
+    }
+    to {
+        transform: translateX(100%);
+    }
+}
+  

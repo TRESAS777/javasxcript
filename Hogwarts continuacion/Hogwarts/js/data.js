@@ -1,3 +1,39 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // let clases_Y_Profesores = {
 //     transformaciones: "Profesor Kevin Slughorn",
 //     herbologia: "Profesor Maria Umbridge",

@@ -96,6 +96,20 @@ console.log(estudianteDeHogwarts);
 
 
 
+const btnIniciar = document.querySelector("#iniciar");
+let columnaDerecha = document.querySelector("#columnaDerecha")
+let columnaIzquierda = document.querySelector("#columnaIzquierda")
+// columnaDerecha.style.filter =  "brightness(0.9)";
+
+    btnIniciar.addEventListener("click", () => {
+        columnaDerecha.style.animation="salidaDerecha 5s ease";
+        columnaIzquierda.style.animation="salidaIzquierda 5s ease";
+    })
+
+ 
+
+
+
 
 
 
