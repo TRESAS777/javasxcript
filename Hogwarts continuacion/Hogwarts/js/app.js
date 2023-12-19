@@ -1,12 +1,14 @@
 let estudianteDeHogwarts = {
-    Nombre: "Tom Marvolo Riddle", 
-    edad: "97", 
-    familia: "Tom Riddle, Merope Gaunt" ,
-    linaje: "Sangre pura", 
-    casa: "", 
+    Nombre: "Tom Marvolo Riddle",
+    edad: "97",
+    familia: "Tom Riddle, Merope Gaunt",
+    linaje: "Sangre pura",
+    casa: "",
     animalPatronus: "",
     cualidades: "Ambición, Determinación, Astucia",
 };
+
+let active
 
 let clases_Y_Profesores = {
     transformaciones: "Profesor Kevin Slughorn",
@@ -21,20 +23,20 @@ let clases_Y_Profesores = {
 let linaje = estudianteDeHogwarts.linaje.toLowerCase();
 let cualidades = estudianteDeHogwarts.cualidades.toLowerCase();
 
-if (cualidades.includes("ambición")||cualidades.includes("determinación")||cualidades.includes("astucia")&&linaje.includes("sangre pura")) {
+if (cualidades.includes("ambición") || cualidades.includes("determinación") || cualidades.includes("astucia") && linaje.includes("sangre pura")) {
     estudianteDeHogwarts.casa = "Slytherin";
-} else if (cualidades.includes("valor")||cualidades.includes("fuerza")||cualidades.includes("audacia")&&linaje.includes("sangre pura")||linaje.includes("muggle")||linaje.includes("mestizo")) {
+} else if (cualidades.includes("valor") || cualidades.includes("fuerza") || cualidades.includes("audacia") && linaje.includes("sangre pura") || linaje.includes("muggle") || linaje.includes("mestizo")) {
     estudianteDeHogwarts.casa = "Gryffindor";
-} else if (cualidades.includes("justicia")||cualidades.includes("lealtad")||cualidades.includes("paciencia")&&linaje.includes("muggle")||linaje.includes("mestizo")) {
+} else if (cualidades.includes("justicia") || cualidades.includes("lealtad") || cualidades.includes("paciencia") && linaje.includes("muggle") || linaje.includes("mestizo")) {
     estudianteDeHogwarts.casa = "Hufflepuff";
-} else if (cualidades.includes("creatividad")||cualidades.includes("erudición")||cualidades.includes("inteligencia")&&linaje.includes("sangre pura")||linaje.includes("muggle")||linaje.includes("mestizo")) {
+} else if (cualidades.includes("creatividad") || cualidades.includes("erudición") || cualidades.includes("inteligencia") && linaje.includes("sangre pura") || linaje.includes("muggle") || linaje.includes("mestizo")) {
     estudianteDeHogwarts.casa = "Ravenclaw";
 }
 
 console.log(estudianteDeHogwarts);
 
 let claseTransformaciones = {
-    profesor : clases_Y_Profesores.transformaciones,
+    profesor: clases_Y_Profesores.transformaciones,
     horario: "12 PM",
     boggartPresente: true,
     boggartTransformado: false,
@@ -55,16 +57,16 @@ let claseTransformaciones = {
     },
 };
 
-let boggartEjemplo= `"Imaginese lo que mas le temes"`;
+let boggartEjemplo = `"Imaginese lo que mas le temes"`;
 boggartEjemplo = {
-    transformar : claseTransformaciones.enfrentarBoggart(boggartEjemplo),
+    transformar: claseTransformaciones.enfrentarBoggart(boggartEjemplo),
 }
 
 let defensaContraLasArtesOscuras = {
     profesor: clases_Y_Profesores.defensaContraLasArtesOscuras,
     generarUnAnimalPatronus: function () {
-        let animalPatronus = ["León","Aguila","Ciervo","Tejón","Serpiente"];
-        this.animalPatronus = animalPatronus[Math.floor(Math.random()*animalPatronus.length)];
+        let animalPatronus = ["León", "Aguila", "Ciervo", "Tejón", "Serpiente"];
+        this.animalPatronus = animalPatronus[Math.floor(Math.random() * animalPatronus.length)];
     }
 };
 defensaContraLasArtesOscuras.generarUnAnimalPatronus();
@@ -78,7 +80,7 @@ la enfermería
 
 function apareceDementor() {
     dementor = true;
-    if (estudianteDeHogwarts.animalPatronus ) {
+    if (estudianteDeHogwarts.animalPatronus) {
         console.log("El dementor ha sido detenido");
         dementor = false;
     } else {
@@ -99,14 +101,53 @@ console.log(estudianteDeHogwarts);
 const btnIniciar = document.querySelector("#iniciar");
 let columnaDerecha = document.querySelector("#columnaDerecha")
 let columnaIzquierda = document.querySelector("#columnaIzquierda")
+let ventanaAbierta = false;
 // columnaDerecha.style.filter =  "brightness(0.9)";
 
-    btnIniciar.addEventListener("click", () => {
-        columnaDerecha.style.animation="salidaDerecha 5s ease";
-        columnaIzquierda.style.animation="salidaIzquierda 5s ease";
-    })
 
- 
+
+btnIniciar.addEventListener("click", () => {
+// btnIniciar.
+
+if (!ventanaAbierta){ 
+
+    columnaIzquierda.classList.add("traslateIzq")
+    columnaDerecha.classList.add("traslateDe")
+    btnIniciar.style.opacity  = 0;
+    // setTimeout(()=>{
+        btnIniciar.classList.add("cambiarUbicacion")
+        btnIniciar.textContent = "SALIR"
+        // },1500)
+    ventanaAbierta=!ventanaAbierta
+} else {
+    columnaIzquierda.classList.remove("traslateIzq")
+    columnaDerecha.classList.remove("traslateDe")
+    btnIniciar.style.opacity  = 0;
+    btnIniciar.classList.remove("cambiarUbicacion") 
+    btnIniciar.textContent = "INICIAR"
+    ventanaAbierta=!ventanaAbierta
+
+}
+    setTimeout(()=>{
+        btnIniciar.style.opacity  = 1;
+    },2000)
+    // console.log(btnIniciar.attributes);
+    // console.log(btnIniciar);
+
+})
+
+
+// btnIniciar.addEventListener("click", () => {
+//         columnaIzquierda.classList.remove("traslateIzq")
+//         columnaDerecha.classList.remove("traslateDe")
+//         btnIniciar.textContent = "INICIAR"
+//         btnIniciar.classList.remove("cambiarUbicacion")
+
+// },2000 )
+
+
+
+
 
 
 
