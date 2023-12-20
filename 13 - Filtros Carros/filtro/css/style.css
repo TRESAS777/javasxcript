@@ -1,0 +1,153 @@
+/* Se importa la fuente */
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+/* Resetear estilos por defecto */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* Se usa la funete que se importo */
+    font-family: 'Lato', sans-serif;
+}
+
+/* fondo de la pagina */
+.banner {
+    width: 100%;
+    height: 100vh;
+    background-image: url(../img/bg.jpg);
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* contenedor del todo el texto y formularios */
+.container {
+    width: 70%;
+    padding-top: 2%;
+    
+}
+
+/* contenedor del titulo */
+.container h1 {
+    text-align: center;
+    font-size: 36px;
+    font-weight: bold;
+    color: #000;
+    text-shadow: 0px 0px 20px white;
+    text-transform: uppercase;
+}
+
+/* formulario */
+/* .marca {
+    color: #000;
+    text-shadow: 0px 0px 20px white;
+    text-transform: uppercase;
+} */
+
+.form-filter {
+    margin-top: 3%;
+}
+
+.row{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    gap: 28px;
+    margin: 20px 0px;
+    flex-wrap: wrap;
+
+}
+
+.cont-select {
+    display: flex;
+    flex-direction: column;
+}
+
+.cont-select label {
+    color: #000;
+    text-shadow: 0px 0px 20px white;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+
+/* .sombra {
+    text-shadow: 0px 0px 0px white;
+    background: radial-gradient( white, black);
+} */
+
+/* personalizando el select */
+.cont-select select {
+    background-color: #00000050 !important; /** color negro con 50% de trasparencia y la palabra reservda !important para que el navegadortome en cuenta la personalizacion del select*/
+    /* color: #e3e3e3; */
+    text-shadow: 0px 0px 20px white;
+    text-transform: uppercase;
+    padding: 10px;
+    border: 1px solid #ededed;
+    border-radius: 7px;
+    width: 250px;
+}
+
+.cont-select select option{
+    background-color: #000 !important;
+    font-size: 16px;
+}
+
+/* Tarjetas */
+
+.container-cards {
+    padding: 20px;
+    height: 55vh;
+    /* height: auto; */
+    width: 80%;
+    overflow-y: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap;/* hace que los elementos se vuelvan una columna si no caben horizontalmente*/
+}
+
+/* Personaliza toda la barra de desplazamiento */
+
+.container-cards {
+    scrollbar-width: 10px;
+}
+.container-cards::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+.container-cards::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.container-cards::-webkit-scrollbar-thumb {
+    background: red;
+    border-radius: 20px;
+}
+
+.container-cards .card {
+    border: 1px solid #fafafa50;
+    border-radius: 10px;
+    overflow: hidden;
+    background: #00000050;
+    height: min-content;
+    width: 250px;
+}
+
+.container-cards .card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.container-cards .card p {
+    color: #e3e3e3;
+    text-align: center;
+    padding: 5px 20px;
+}
