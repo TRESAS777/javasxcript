@@ -14,77 +14,44 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    min-width: 100vw;
+    min-width: 100%;
     color: whitesmoke;
     overflow: hidden;
 }
               
-#main  button {
-    height: 40px;
+button {
     position: absolute;
-    top: 50vh;
-    left: 48vw;
     transition: 2s ease-in-out;
 }
-#main{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-}
 
-#main .btn {
+.btn {
     font-family: 'Magic School Two', sans-serif;
 }
 
-#main button:hover {
+button:hover {
     transition: .5s;
     scale: 2;
 }
 
-.d-flex {
-    display: flex;
-    height: 100vh;
-    width: 100%;
-}
-
-.d-flex #columnaIzquierda, .d-flex #columnaDerecha {
-    height: 100%;
-    width: 50%;
-    overflow: hidden;
-    position: relative;
-}
-
-.d-flex #columnaIzquierda img ,   .d-flex #columnaDerecha img {
-    width: 100vw;
-    height: 100%;
-}
-
-.d-flex #columnaIzquierda img {
-    left: 0;
-}
-
-.d-flex #columnaDerecha img {
-    position: absolute;
-    right: 0;
-}
-
-.d-flex #columnaIzquierda, .d-flex #columnaDerecha {
+.d-flex #columnaIzquierda, .d-flex #columnaDerecha   {
     position: relative;
     transition: 2s ease;
 }
 
 .traslateIzq {
     transform: translateX(-100%);
+
 }
 
 .traslateDe {
     transform: translateX(100%);
+
 }
 
-#main .cambiarUbicacion{
+.cambiarUbicacion {
     position: absolute;
-    top: 90%;
-    left: 4%;
+    bottom: 40px;
+    left: 40px;
     z-index: 4;
+
 }

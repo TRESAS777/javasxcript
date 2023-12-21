@@ -103,29 +103,29 @@ let columnaDerecha = document.querySelector("#columnaDerecha")
 let columnaIzquierda = document.querySelector("#columnaIzquierda")
 let ventanaAbierta = false;
 
-function transition () {
-    btnIniciar.addEventListener("click", () => {
-        if (!ventanaAbierta){ 
-            btnIniciar.style.opacity  = 0;
-            columnaIzquierda.classList.add("traslateIzq")
-            columnaDerecha.classList.add("traslateDe")
-            btnIniciar.classList.add("cambiarUbicacion")
-            btnIniciar.textContent = "SALIR"
-            ventanaAbierta=!ventanaAbierta
-        } else {
-            btnIniciar.style.opacity  = 0;
-            columnaIzquierda.classList.remove("traslateIzq")
-            columnaDerecha.classList.remove("traslateDe")
-            btnIniciar.classList.remove("cambiarUbicacion") 
-            btnIniciar.textContent = "INICIAR"
-            ventanaAbierta=!ventanaAbierta
-        }
-        setTimeout(()=>{
-            btnIniciar.style.opacity  = 1;
-        },2000)
-    })
-}
-transition()
+
+btnIniciar.addEventListener("click", () => {
+    if (!ventanaAbierta){ 
+        columnaIzquierda.classList.add("traslateIzq")
+        columnaDerecha.classList.add("traslateDe")
+        btnIniciar.style.opacity  = 0;
+        btnIniciar.classList.add("cambiarUbicacion")
+        btnIniciar.textContent = "SALIR"
+        ventanaAbierta=!ventanaAbierta
+    } else {
+        columnaIzquierda.classList.remove("traslateIzq")
+        columnaDerecha.classList.remove("traslateDe")
+        btnIniciar.style.opacity  = 0;
+        btnIniciar.classList.remove("cambiarUbicacion") 
+        btnIniciar.textContent = "INICIAR"
+        ventanaAbierta=!ventanaAbierta
+    }
+    setTimeout(()=>{
+        btnIniciar.style.opacity  = 1;
+    },2000)
+
+})
+
 
 
 
